@@ -1,0 +1,116 @@
+﻿using System;
+using System.Windows.Forms;
+using telas.cadastros;
+namespace telas
+{
+    public partial class frmPrincipal : DevExpress.XtraEditors.XtraForm
+    {
+        public frmPrincipal()
+        {
+            InitializeComponent();
+        }
+
+        private void tmRelogio_Tick(object sender, EventArgs e)
+        {
+            lblHora.Caption= DateTime.Now.ToLongTimeString();
+            lblData.Caption = DateTime.Now.ToLongDateString();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void barSubItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            Application.Exit();
+        }
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmVendas vendas = new frmVendas();
+            vendas.MdiParent = this;
+            vendas.Show();
+        }
+
+
+        private void btnNovoUsuario_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+            new frmUsuarios().Show();
+        }
+
+        private void btnNovoLocal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmLocais().Show();
+        }
+
+        private void btnNovaCategoria_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new telas.cadastros.frmCategorias().Show();
+        }
+
+        private void btnNovoSetor_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmSetor().Show();
+        }
+
+        private void btnSobre_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmSobre().ShowDialog();
+        }
+
+        private void btnEntradaProduto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmProdutos().Show();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frmVendas().Show();
+        }
+
+        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void barButtonItem17_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void barButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+        }
+
+        private void barButtonItem19_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LayoutMdi(MdiLayout.ArrangeIcons);
+        }
+
+        private void btnControleEstoque_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            telas.consultas.frmProdutos ControledeEstoque = new telas.consultas.frmProdutos();
+            ControledeEstoque.MdiParent = this;
+            ControledeEstoque.Show();
+        }
+
+     
+    }
+}
