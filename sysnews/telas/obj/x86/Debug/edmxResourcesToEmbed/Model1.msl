@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sysnewsModel1StoreContainer" CdmEntityContainer="sysnewsEntities1">
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="sysnewsModel1.Categorias">
+        <MappingFragment StoreEntitySet="Categorias">
+          <ScalarProperty Name="idCategorias" ColumnName="idCategorias" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="sysnewsModel1.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="idClientes" ColumnName="idClientes" />
+          <ScalarProperty Name="matricula" ColumnName="matricula" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+          <ScalarProperty Name="tel_fixo" ColumnName="tel_fixo" />
+          <ScalarProperty Name="tel_celular" ColumnName="tel_celular" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="setor" ColumnName="setor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormasPagamentos">
+      <EntityTypeMapping TypeName="sysnewsModel1.FormasPagamentos">
+        <MappingFragment StoreEntitySet="FormasPagamentos">
+          <ScalarProperty Name="idFormaPagamento" ColumnName="idFormaPagamento" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fornecedores">
+      <EntityTypeMapping TypeName="sysnewsModel1.Fornecedores">
+        <MappingFragment StoreEntitySet="Fornecedores">
+          <ScalarProperty Name="idFornecedores" ColumnName="idFornecedores" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locais">
+      <EntityTypeMapping TypeName="sysnewsModel1.Locais">
+        <MappingFragment StoreEntitySet="Locais">
+          <ScalarProperty Name="idLocal" ColumnName="idLocal" />
+          <ScalarProperty Name="loc_descricao" ColumnName="loc_descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perfis">
+      <EntityTypeMapping TypeName="sysnewsModel1.Perfis">
+        <MappingFragment StoreEntitySet="Perfis">
+          <ScalarProperty Name="idPerfil" ColumnName="idPerfil" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produtos">
+      <EntityTypeMapping TypeName="sysnewsModel1.Produtos">
+        <MappingFragment StoreEntitySet="Produtos">
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="preco" ColumnName="preco" />
+          <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="local" ColumnName="local" />
+          <ScalarProperty Name="codigo_barra" ColumnName="codigo_barra" />
+          <ScalarProperty Name="fornecedor" ColumnName="fornecedor" />
+          <ScalarProperty Name="dt_validade" ColumnName="dt_validade" />
+          <ScalarProperty Name="quantidade_minimo" ColumnName="quantidade_minimo" />
+          <ScalarProperty Name="preco_compra" ColumnName="preco_compra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setores">
+      <EntityTypeMapping TypeName="sysnewsModel1.Setores">
+        <MappingFragment StoreEntitySet="Setores">
+          <ScalarProperty Name="idSetores" ColumnName="idSetores" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="chefe" ColumnName="chefe" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="ramal" ColumnName="ramal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="sysnewsModel1.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="idUsuarios" ColumnName="idUsuarios" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="perfil" ColumnName="perfil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendas">
+      <EntityTypeMapping TypeName="sysnewsModel1.Vendas">
+        <MappingFragment StoreEntitySet="Vendas">
+          <ScalarProperty Name="idVenda" ColumnName="idVenda" />
+          <ScalarProperty Name="qtdProduto" ColumnName="qtdProduto" />
+          <ScalarProperty Name="valorProduto" ColumnName="valorProduto" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="produto" ColumnName="produto" />
+          <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="cliente" ColumnName="cliente" />
+          <ScalarProperty Name="formaPagamento" ColumnName="formaPagamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendedores">
+      <EntityTypeMapping TypeName="sysnewsModel1.Vendedores">
+        <MappingFragment StoreEntitySet="Vendedores">
+          <ScalarProperty Name="idVendedores" ColumnName="idVendedores" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="endereco" ColumnName="endereco" />
+          <ScalarProperty Name="telefone" ColumnName="telefone" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

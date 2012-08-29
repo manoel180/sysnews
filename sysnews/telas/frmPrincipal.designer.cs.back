@@ -1,0 +1,1691 @@
+﻿namespace telas
+{
+    partial class frmPrincipal
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            this.tmRelogio = new System.Windows.Forms.Timer(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barFerramentas = new DevExpress.XtraBars.Bar();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barMenus = new DevExpress.XtraBars.Bar();
+            this.mnCadastros = new DevExpress.XtraBars.BarSubItem();
+            this.mnUsuarios = new DevExpress.XtraBars.BarSubItem();
+            this.btnNovoUsuario = new DevExpress.XtraBars.BarButtonItem();
+            this.mnUsuConsultar = new DevExpress.XtraBars.BarSubItem();
+            this.mnLocais = new DevExpress.XtraBars.BarSubItem();
+            this.btnNovoLocal = new DevExpress.XtraBars.BarButtonItem();
+            this.btnConsultaLocal = new DevExpress.XtraBars.BarButtonItem();
+            this.mnCategorias = new DevExpress.XtraBars.BarSubItem();
+            this.btnNovaCategoria = new DevExpress.XtraBars.BarButtonItem();
+            this.btnConsultarCategoria = new DevExpress.XtraBars.BarButtonItem();
+            this.mnSetores = new DevExpress.XtraBars.BarSubItem();
+            this.btnNovoSetor = new DevExpress.XtraBars.BarButtonItem();
+            this.btnConsultarSetor = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.mnEstoque = new DevExpress.XtraBars.BarSubItem();
+            this.btnControleEstoque = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEntradaProduto = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.mnVendas = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
+            this.mnAjuda = new DevExpress.XtraBars.BarSubItem();
+            this.btnSobre = new DevExpress.XtraBars.BarButtonItem();
+            this.mnSair = new DevExpress.XtraBars.BarSubItem();
+            this.barStatus = new DevExpress.XtraBars.Bar();
+            this.lblStatus = new DevExpress.XtraBars.BarStaticItem();
+            this.lblData = new DevExpress.XtraBars.BarStaticItem();
+            this.lblHora = new DevExpress.XtraBars.BarStaticItem();
+            this.barAndDockingController1 = new DevExpress.XtraBars.BarAndDockingController(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.mnUsuNovo = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tmRelogio
+            // 
+            this.tmRelogio.Enabled = true;
+            this.tmRelogio.Tick += new System.EventHandler(this.tmRelogio_Tick);
+            // 
+            // barManager1
+            // 
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.barFerramentas,
+            this.barMenus,
+            this.barStatus});
+            this.barManager1.Controller = this.barAndDockingController1;
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.mnCadastros,
+            this.mnVendas,
+            this.mnAjuda,
+            this.mnSair,
+            this.lblStatus,
+            this.lblData,
+            this.lblHora,
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.mnUsuarios,
+            this.mnUsuNovo,
+            this.mnUsuConsultar,
+            this.btnNovoUsuario,
+            this.barButtonItem3,
+            this.mnLocais,
+            this.btnNovoLocal,
+            this.btnConsultaLocal,
+            this.mnCategorias,
+            this.btnNovaCategoria,
+            this.btnConsultarCategoria,
+            this.mnSetores,
+            this.btnNovoSetor,
+            this.btnConsultarSetor,
+            this.btnSobre,
+            this.mnEstoque,
+            this.btnEntradaProduto,
+            this.barButtonItem4,
+            this.barButtonItem5,
+            this.barButtonItem6,
+            this.barSubItem1,
+            this.barSubItem2,
+            this.barButtonItem7,
+            this.barButtonItem8,
+            this.barButtonItem9,
+            this.barLargeButtonItem1,
+            this.barButtonItem10,
+            this.barButtonItem11,
+            this.barButtonItem12,
+            this.barButtonItem14,
+            this.barSubItem3,
+            this.barButtonItem15,
+            this.barButtonItem16,
+            this.barButtonItem17,
+            this.barButtonItem18,
+            this.barButtonItem19,
+            this.barButtonItem20,
+            this.btnControleEstoque});
+            this.barManager1.MainMenu = this.barMenus;
+            this.barManager1.MaxItemId = 48;
+            this.barManager1.MdiMenuMergeStyle = DevExpress.XtraBars.BarMdiMenuMergeStyle.Always;
+            this.barManager1.StatusBar = this.barStatus;
+            // 
+            // barFerramentas
+            // 
+            this.barFerramentas.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barFerramentas.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barFerramentas.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barFerramentas.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barFerramentas.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barFerramentas.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barFerramentas.BarName = "Tools";
+            this.barFerramentas.CanDockStyle = ((DevExpress.XtraBars.BarCanDockStyle)((((((DevExpress.XtraBars.BarCanDockStyle.Floating | DevExpress.XtraBars.BarCanDockStyle.Left)
+                        | DevExpress.XtraBars.BarCanDockStyle.Top)
+                        | DevExpress.XtraBars.BarCanDockStyle.Right)
+                        | DevExpress.XtraBars.BarCanDockStyle.Bottom)
+                        | DevExpress.XtraBars.BarCanDockStyle.Standalone)));
+            this.barFerramentas.DockCol = 0;
+            this.barFerramentas.DockRow = 1;
+            this.barFerramentas.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.barFerramentas.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.Caption, this.barButtonItem2, "SAIR")});
+            this.barFerramentas.OptionsBar.AllowQuickCustomization = false;
+            this.barFerramentas.OptionsBar.BarState = DevExpress.XtraBars.BarState.Expanded;
+            this.barFerramentas.OptionsBar.DrawDragBorder = false;
+            this.barFerramentas.OptionsBar.RotateWhenVertical = false;
+            this.barFerramentas.Text = "Tools";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem1.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem1.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem1.Caption = "Clientes";
+            this.barButtonItem1.Id = 7;
+            this.barButtonItem1.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem1.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
+            // 
+            // barButtonItem20
+            // 
+            this.barButtonItem20.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem20.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem20.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem20.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem20.Caption = "Imprimir";
+            this.barButtonItem20.Id = 46;
+            this.barButtonItem20.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem20.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem20.Name = "barButtonItem20";
+            this.barButtonItem20.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem2.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem2.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem2.Caption = "SAIR";
+            this.barButtonItem2.Id = 8;
+            this.barButtonItem2.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem2.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barMenus
+            // 
+            this.barMenus.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barMenus.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barMenus.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barMenus.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barMenus.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barMenus.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barMenus.BarName = "Main menu";
+            this.barMenus.CanDockStyle = ((DevExpress.XtraBars.BarCanDockStyle)((((((DevExpress.XtraBars.BarCanDockStyle.Floating | DevExpress.XtraBars.BarCanDockStyle.Left)
+                        | DevExpress.XtraBars.BarCanDockStyle.Top)
+                        | DevExpress.XtraBars.BarCanDockStyle.Right)
+                        | DevExpress.XtraBars.BarCanDockStyle.Bottom)
+                        | DevExpress.XtraBars.BarCanDockStyle.Standalone)));
+            this.barMenus.DockCol = 0;
+            this.barMenus.DockRow = 0;
+            this.barMenus.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.barMenus.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnCadastros),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnEstoque),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnVendas),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnAjuda),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnSair)});
+            this.barMenus.OptionsBar.AllowQuickCustomization = false;
+            this.barMenus.OptionsBar.BarState = DevExpress.XtraBars.BarState.Expanded;
+            this.barMenus.OptionsBar.DrawDragBorder = false;
+            this.barMenus.OptionsBar.MultiLine = true;
+            this.barMenus.OptionsBar.UseWholeRow = true;
+            this.barMenus.Text = "Main menu";
+            // 
+            // mnCadastros
+            // 
+            this.mnCadastros.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnCadastros.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCadastros.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCadastros.Caption = "CADASTROS";
+            this.mnCadastros.Id = 0;
+            this.mnCadastros.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnCadastros.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnUsuarios),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnLocais),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnCategorias),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnSetores),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2)});
+            this.mnCadastros.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCadastros.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCadastros.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCadastros.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCadastros.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCadastros.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCadastros.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCadastros.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCadastros.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCadastros.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCadastros.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCadastros.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCadastros.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCadastros.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCadastros.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCadastros.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCadastros.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCadastros.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCadastros.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCadastros.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCadastros.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCadastros.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCadastros.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCadastros.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCadastros.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCadastros.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCadastros.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCadastros.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCadastros.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCadastros.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCadastros.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnCadastros.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnCadastros.Name = "mnCadastros";
+            this.mnCadastros.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // mnUsuarios
+            // 
+            this.mnUsuarios.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnUsuarios.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuarios.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuarios.Caption = "Usuarios";
+            this.mnUsuarios.Id = 9;
+            this.mnUsuarios.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnUsuarios.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnNovoUsuario),
+            new DevExpress.XtraBars.LinkPersistInfo(this.mnUsuConsultar)});
+            this.mnUsuarios.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuarios.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuarios.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuarios.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuarios.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuarios.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuarios.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuarios.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuarios.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuarios.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuarios.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuarios.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuarios.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuarios.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuarios.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuarios.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuarios.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuarios.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuarios.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuarios.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuarios.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuarios.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuarios.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuarios.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuarios.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuarios.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuarios.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuarios.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuarios.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuarios.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuarios.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnUsuarios.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnUsuarios.Name = "mnUsuarios";
+            this.mnUsuarios.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // btnNovoUsuario
+            // 
+            this.btnNovoUsuario.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnNovoUsuario.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnNovoUsuario.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnNovoUsuario.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnNovoUsuario.Caption = "Novo";
+            this.btnNovoUsuario.Id = 12;
+            this.btnNovoUsuario.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnNovoUsuario.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnNovoUsuario.Name = "btnNovoUsuario";
+            this.btnNovoUsuario.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.btnNovoUsuario.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNovoUsuario_ItemClick);
+            // 
+            // mnUsuConsultar
+            // 
+            this.mnUsuConsultar.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnUsuConsultar.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuConsultar.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuConsultar.Caption = "Consultar";
+            this.mnUsuConsultar.Id = 11;
+            this.mnUsuConsultar.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnUsuConsultar.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuConsultar.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuConsultar.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuConsultar.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuConsultar.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuConsultar.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuConsultar.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuConsultar.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuConsultar.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuConsultar.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnUsuConsultar.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnUsuConsultar.Name = "mnUsuConsultar";
+            this.mnUsuConsultar.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // mnLocais
+            // 
+            this.mnLocais.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnLocais.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnLocais.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnLocais.Caption = "Locais";
+            this.mnLocais.Id = 14;
+            this.mnLocais.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnLocais.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnNovoLocal),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnConsultaLocal)});
+            this.mnLocais.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnLocais.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnLocais.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnLocais.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnLocais.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnLocais.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnLocais.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnLocais.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnLocais.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnLocais.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnLocais.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnLocais.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnLocais.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnLocais.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnLocais.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnLocais.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnLocais.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnLocais.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnLocais.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnLocais.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnLocais.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnLocais.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnLocais.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnLocais.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnLocais.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnLocais.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnLocais.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnLocais.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnLocais.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnLocais.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnLocais.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnLocais.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnLocais.Name = "mnLocais";
+            this.mnLocais.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // btnNovoLocal
+            // 
+            this.btnNovoLocal.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnNovoLocal.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnNovoLocal.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnNovoLocal.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnNovoLocal.Caption = "Novo";
+            this.btnNovoLocal.Id = 15;
+            this.btnNovoLocal.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnNovoLocal.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnNovoLocal.Name = "btnNovoLocal";
+            this.btnNovoLocal.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.btnNovoLocal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNovoLocal_ItemClick);
+            // 
+            // btnConsultaLocal
+            // 
+            this.btnConsultaLocal.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnConsultaLocal.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnConsultaLocal.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnConsultaLocal.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnConsultaLocal.Caption = "Consultar";
+            this.btnConsultaLocal.Id = 16;
+            this.btnConsultaLocal.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnConsultaLocal.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnConsultaLocal.Name = "btnConsultaLocal";
+            this.btnConsultaLocal.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // mnCategorias
+            // 
+            this.mnCategorias.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnCategorias.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCategorias.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCategorias.Caption = "Categorias";
+            this.mnCategorias.Id = 17;
+            this.mnCategorias.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnCategorias.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnNovaCategoria),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnConsultarCategoria)});
+            this.mnCategorias.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCategorias.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCategorias.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCategorias.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCategorias.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCategorias.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCategorias.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCategorias.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCategorias.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCategorias.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCategorias.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCategorias.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCategorias.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCategorias.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCategorias.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCategorias.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCategorias.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCategorias.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCategorias.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCategorias.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCategorias.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCategorias.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCategorias.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCategorias.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCategorias.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnCategorias.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnCategorias.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnCategorias.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnCategorias.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnCategorias.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnCategorias.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnCategorias.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnCategorias.Name = "mnCategorias";
+            this.mnCategorias.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // btnNovaCategoria
+            // 
+            this.btnNovaCategoria.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnNovaCategoria.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnNovaCategoria.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnNovaCategoria.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnNovaCategoria.Caption = "Novo";
+            this.btnNovaCategoria.Id = 18;
+            this.btnNovaCategoria.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnNovaCategoria.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnNovaCategoria.Name = "btnNovaCategoria";
+            this.btnNovaCategoria.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.btnNovaCategoria.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNovaCategoria_ItemClick);
+            // 
+            // btnConsultarCategoria
+            // 
+            this.btnConsultarCategoria.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnConsultarCategoria.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnConsultarCategoria.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnConsultarCategoria.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnConsultarCategoria.Caption = "Consultar";
+            this.btnConsultarCategoria.Id = 19;
+            this.btnConsultarCategoria.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnConsultarCategoria.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnConsultarCategoria.Name = "btnConsultarCategoria";
+            this.btnConsultarCategoria.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // mnSetores
+            // 
+            this.mnSetores.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnSetores.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSetores.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSetores.Caption = "Setores";
+            this.mnSetores.Id = 20;
+            this.mnSetores.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnSetores.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnNovoSetor),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnConsultarSetor)});
+            this.mnSetores.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSetores.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSetores.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSetores.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSetores.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSetores.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSetores.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSetores.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSetores.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSetores.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSetores.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSetores.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSetores.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSetores.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSetores.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSetores.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSetores.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSetores.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSetores.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSetores.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSetores.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSetores.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSetores.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSetores.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSetores.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSetores.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSetores.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSetores.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSetores.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSetores.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSetores.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnSetores.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnSetores.Name = "mnSetores";
+            this.mnSetores.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // btnNovoSetor
+            // 
+            this.btnNovoSetor.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnNovoSetor.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnNovoSetor.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnNovoSetor.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnNovoSetor.Caption = "Novo";
+            this.btnNovoSetor.Id = 21;
+            this.btnNovoSetor.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnNovoSetor.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnNovoSetor.Name = "btnNovoSetor";
+            this.btnNovoSetor.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.btnNovoSetor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNovoSetor_ItemClick);
+            // 
+            // btnConsultarSetor
+            // 
+            this.btnConsultarSetor.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnConsultarSetor.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnConsultarSetor.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnConsultarSetor.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnConsultarSetor.Caption = "Consultar";
+            this.btnConsultarSetor.Id = 22;
+            this.btnConsultarSetor.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnConsultarSetor.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnConsultarSetor.Name = "btnConsultarSetor";
+            this.btnConsultarSetor.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barSubItem2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem2.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem2.Caption = "Vendedores";
+            this.barSubItem2.Id = 30;
+            this.barSubItem2.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8)});
+            this.barSubItem2.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem2.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem2.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem2.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem2.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem2.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem2.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem2.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem2.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem2.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem2.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem2.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem2.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem2.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem2.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem2.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem2.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem2.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem2.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem2.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem2.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem2.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem2.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem2.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem2.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem2.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem2.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem2.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem2.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem2.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem2.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.barSubItem2.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barSubItem2.Name = "barSubItem2";
+            this.barSubItem2.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem7.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem7.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem7.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem7.Caption = "Novo";
+            this.barButtonItem7.Id = 31;
+            this.barButtonItem7.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem7.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem8.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem8.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem8.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem8.Caption = "Consultar";
+            this.barButtonItem8.Id = 32;
+            this.barButtonItem8.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem8.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // mnEstoque
+            // 
+            this.mnEstoque.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnEstoque.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnEstoque.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnEstoque.Caption = "ESTOQUE";
+            this.mnEstoque.Id = 24;
+            this.mnEstoque.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnEstoque.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnControleEstoque),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEntradaProduto),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9)});
+            this.mnEstoque.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnEstoque.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnEstoque.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnEstoque.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnEstoque.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnEstoque.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnEstoque.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnEstoque.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnEstoque.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnEstoque.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnEstoque.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnEstoque.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnEstoque.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnEstoque.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnEstoque.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnEstoque.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnEstoque.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnEstoque.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnEstoque.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnEstoque.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnEstoque.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnEstoque.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnEstoque.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnEstoque.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnEstoque.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnEstoque.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnEstoque.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnEstoque.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnEstoque.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnEstoque.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnEstoque.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnEstoque.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnEstoque.Name = "mnEstoque";
+            this.mnEstoque.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // btnControleEstoque
+            // 
+            this.btnControleEstoque.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnControleEstoque.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnControleEstoque.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnControleEstoque.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnControleEstoque.Caption = "Controle de Estoque";
+            this.btnControleEstoque.Id = 47;
+            this.btnControleEstoque.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnControleEstoque.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnControleEstoque.Name = "btnControleEstoque";
+            this.btnControleEstoque.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.btnControleEstoque.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnControleEstoque_ItemClick);
+            // 
+            // btnEntradaProduto
+            // 
+            this.btnEntradaProduto.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnEntradaProduto.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnEntradaProduto.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnEntradaProduto.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnEntradaProduto.Caption = "Entrada de Produtos";
+            this.btnEntradaProduto.Id = 25;
+            this.btnEntradaProduto.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnEntradaProduto.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnEntradaProduto.Name = "btnEntradaProduto";
+            this.btnEntradaProduto.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.btnEntradaProduto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEntradaProduto_ItemClick);
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem5.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem5.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem5.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem5.Caption = "Devolução de Produtos";
+            this.barButtonItem5.Id = 27;
+            this.barButtonItem5.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem5.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem9.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem9.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem9.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem9.Caption = "Lista de Produtos a devolver";
+            this.barButtonItem9.Id = 33;
+            this.barButtonItem9.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem9.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // mnVendas
+            // 
+            this.mnVendas.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnVendas.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnVendas.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnVendas.Caption = "VENDAS";
+            this.mnVendas.Id = 1;
+            this.mnVendas.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnVendas.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem11),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem12, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem14)});
+            this.mnVendas.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnVendas.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnVendas.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnVendas.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnVendas.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnVendas.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnVendas.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnVendas.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnVendas.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnVendas.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnVendas.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnVendas.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnVendas.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnVendas.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnVendas.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnVendas.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnVendas.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnVendas.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnVendas.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnVendas.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnVendas.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnVendas.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnVendas.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnVendas.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnVendas.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnVendas.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnVendas.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnVendas.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnVendas.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnVendas.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnVendas.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnVendas.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnVendas.Name = "mnVendas";
+            this.mnVendas.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem4.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem4.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem4.Caption = "Caixa";
+            this.barButtonItem4.Id = 26;
+            this.barButtonItem4.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem4.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem6.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem6.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem6.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem6.Caption = "Estorna Venda";
+            this.barButtonItem6.Id = 28;
+            this.barButtonItem6.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem6.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem10
+            // 
+            this.barButtonItem10.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem10.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem10.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem10.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem10.Caption = "Abrir Caixa";
+            this.barButtonItem10.Id = 35;
+            this.barButtonItem10.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem10.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem11
+            // 
+            this.barButtonItem11.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem11.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem11.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem11.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem11.Caption = "Encerrar Caixa";
+            this.barButtonItem11.Id = 36;
+            this.barButtonItem11.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem11.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem12.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem12.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem12.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem12.Caption = "Sangria";
+            this.barButtonItem12.Id = 37;
+            this.barButtonItem12.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem12.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem12.Name = "barButtonItem12";
+            this.barButtonItem12.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem14
+            // 
+            this.barButtonItem14.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem14.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem14.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem14.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem14.Caption = "Abastecer Caixa";
+            this.barButtonItem14.Id = 39;
+            this.barButtonItem14.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem14.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem14.Name = "barButtonItem14";
+            this.barButtonItem14.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barSubItem1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem1.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem1.Caption = "RELATÓRIOS";
+            this.barSubItem1.Id = 29;
+            this.barSubItem1.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barSubItem1.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem1.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem1.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem1.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem1.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem1.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem1.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem1.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem1.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem1.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem1.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem1.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem1.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem1.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem1.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem1.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem1.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem1.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem1.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem1.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem1.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem1.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem1.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem1.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem1.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem1.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem1.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem1.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem1.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem1.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem1.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.barSubItem1.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barSubItem3
+            // 
+            this.barSubItem3.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barSubItem3.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem3.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem3.Caption = "JANELAS";
+            this.barSubItem3.Id = 40;
+            this.barSubItem3.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem15),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem16),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem17),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem18),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem19)});
+            this.barSubItem3.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem3.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem3.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem3.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem3.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem3.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem3.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem3.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem3.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem3.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem3.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem3.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem3.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem3.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem3.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem3.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem3.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem3.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem3.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem3.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem3.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem3.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem3.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem3.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem3.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barSubItem3.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barSubItem3.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barSubItem3.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barSubItem3.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barSubItem3.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barSubItem3.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.barSubItem3.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barSubItem3.Name = "barSubItem3";
+            this.barSubItem3.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem15
+            // 
+            this.barButtonItem15.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem15.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem15.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem15.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem15.Caption = "Cascata";
+            this.barButtonItem15.Id = 41;
+            this.barButtonItem15.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem15.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem15.Name = "barButtonItem15";
+            this.barButtonItem15.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
+            // 
+            // barButtonItem16
+            // 
+            this.barButtonItem16.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem16.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem16.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem16.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem16.Caption = "Organizar na Vertical";
+            this.barButtonItem16.Id = 42;
+            this.barButtonItem16.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem16.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem16.Name = "barButtonItem16";
+            this.barButtonItem16.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
+            // 
+            // barButtonItem17
+            // 
+            this.barButtonItem17.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem17.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem17.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem17.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem17.Caption = "Organizar na Horizontal";
+            this.barButtonItem17.Id = 43;
+            this.barButtonItem17.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem17.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem17.Name = "barButtonItem17";
+            this.barButtonItem17.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
+            // 
+            // barButtonItem18
+            // 
+            this.barButtonItem18.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem18.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem18.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem18.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem18.Caption = "Fechar Todos";
+            this.barButtonItem18.Id = 44;
+            this.barButtonItem18.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem18.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem18.Name = "barButtonItem18";
+            this.barButtonItem18.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
+            // 
+            // barButtonItem19
+            // 
+            this.barButtonItem19.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem19.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem19.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem19.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem19.Caption = "Organizar Ícones";
+            this.barButtonItem19.Id = 45;
+            this.barButtonItem19.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem19.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem19.Name = "barButtonItem19";
+            this.barButtonItem19.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick);
+            // 
+            // mnAjuda
+            // 
+            this.mnAjuda.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnAjuda.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnAjuda.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnAjuda.Caption = "AJUDA";
+            this.mnAjuda.Id = 2;
+            this.mnAjuda.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnAjuda.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnSobre)});
+            this.mnAjuda.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnAjuda.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnAjuda.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnAjuda.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnAjuda.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnAjuda.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnAjuda.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnAjuda.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnAjuda.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnAjuda.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnAjuda.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnAjuda.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnAjuda.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnAjuda.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnAjuda.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnAjuda.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnAjuda.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnAjuda.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnAjuda.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnAjuda.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnAjuda.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnAjuda.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnAjuda.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnAjuda.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnAjuda.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnAjuda.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnAjuda.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnAjuda.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnAjuda.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnAjuda.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnAjuda.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnAjuda.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnAjuda.Name = "mnAjuda";
+            this.mnAjuda.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // btnSobre
+            // 
+            this.btnSobre.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.btnSobre.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnSobre.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.btnSobre.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.btnSobre.Caption = "Sobre";
+            this.btnSobre.Id = 23;
+            this.btnSobre.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.btnSobre.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.btnSobre.Name = "btnSobre";
+            this.btnSobre.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.btnSobre.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSobre_ItemClick);
+            // 
+            // mnSair
+            // 
+            this.mnSair.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnSair.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSair.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSair.Caption = "SAIR";
+            this.mnSair.Id = 3;
+            this.mnSair.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnSair.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4));
+            this.mnSair.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSair.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSair.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSair.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSair.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSair.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSair.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSair.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSair.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSair.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSair.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSair.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSair.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSair.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSair.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSair.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSair.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSair.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSair.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSair.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSair.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSair.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSair.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSair.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSair.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnSair.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnSair.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnSair.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnSair.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnSair.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnSair.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnSair.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnSair.Name = "mnSair";
+            this.mnSair.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.mnSair.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSubItem4_ItemClick);
+            // 
+            // barStatus
+            // 
+            this.barStatus.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barStatus.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barStatus.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barStatus.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barStatus.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barStatus.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barStatus.BarName = "Status bar";
+            this.barStatus.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.barStatus.DockCol = 0;
+            this.barStatus.DockRow = 0;
+            this.barStatus.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.barStatus.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.lblStatus),
+            new DevExpress.XtraBars.LinkPersistInfo(this.lblData),
+            new DevExpress.XtraBars.LinkPersistInfo(this.lblHora)});
+            this.barStatus.OptionsBar.AllowQuickCustomization = false;
+            this.barStatus.OptionsBar.BarState = DevExpress.XtraBars.BarState.Expanded;
+            this.barStatus.OptionsBar.DrawDragBorder = false;
+            this.barStatus.OptionsBar.UseWholeRow = true;
+            this.barStatus.Text = "Status bar";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.lblStatus.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.lblStatus.AutoSize = DevExpress.XtraBars.BarStaticItemSize.Spring;
+            this.lblStatus.Id = 4;
+            this.lblStatus.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.lblStatus.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.lblStatus.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            this.lblStatus.Width = 32;
+            // 
+            // lblData
+            // 
+            this.lblData.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.lblData.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.lblData.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.lblData.AutoSize = DevExpress.XtraBars.BarStaticItemSize.Content;
+            this.lblData.Border = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.lblData.Caption = "Data";
+            this.lblData.Id = 5;
+            this.lblData.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.lblData.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.lblData.Name = "lblData";
+            this.lblData.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.lblData.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // lblHora
+            // 
+            this.lblHora.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.lblHora.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.lblHora.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.lblHora.AutoSize = DevExpress.XtraBars.BarStaticItemSize.Content;
+            this.lblHora.Caption = "Hora";
+            this.lblHora.Id = 6;
+            this.lblHora.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.lblHora.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.lblHora.Name = "lblHora";
+            this.lblHora.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.lblHora.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barAndDockingController1
+            // 
+            this.barAndDockingController1.AppearancesBar.Bar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesBar.Bar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.Bar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesBar.Bar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesBar.Bar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.Bar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesBar.Dock.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesBar.Dock.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.Dock.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesBar.Dock.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesBar.Dock.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.Dock.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesBar.MainMenu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesBar.MainMenu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.MainMenu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesBar.MainMenu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesBar.MainMenu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.MainMenu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesBar.StatusBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesBar.StatusBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.StatusBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesBar.StatusBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesBar.StatusBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.StatusBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesBar.SubMenu.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesBar.SubMenu.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.ActiveTab.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.ActiveTab.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.ActiveTab.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.ActiveTab.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.ActiveTab.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.ActiveTab.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaptionActive.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaptionActive.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaptionActive.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaptionActive.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaptionActive.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.FloatFormCaptionActive.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.HideContainer.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.HideContainer.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.HideContainer.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.HideContainer.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.HideContainer.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.HideContainer.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButton.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButton.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButton.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButton.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButton.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButtonActive.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButtonActive.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButtonActive.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButtonActive.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButtonActive.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.HidePanelButtonActive.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.Panel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.Panel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.Panel.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.Panel.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.Panel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.Panel.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.PanelCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaptionActive.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.PanelCaptionActive.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaptionActive.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaptionActive.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaptionActive.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.PanelCaptionActive.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesDocking.Tabs.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesDocking.Tabs.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.Tabs.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesDocking.Tabs.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesDocking.Tabs.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesDocking.Tabs.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.FormCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.FormCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.FormCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.FormCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.FormCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.FormCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.FilterPanelCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.FilterPanelCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.FilterPanelCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.FilterPanelCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.FilterPanelCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.FilterPanelCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.GroupCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.GroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.GroupCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.GroupCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.GroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.GroupCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemDescription.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemDescription.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemDescription.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemDescription.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemDescription.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Gallery.ItemDescription.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.Item.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.Item.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Item.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.Item.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.Item.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.Item.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescription.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescription.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescription.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescription.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescription.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescription.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescriptionDisabled.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescriptionDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescriptionDisabled.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescriptionDisabled.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescriptionDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDescriptionDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDisabled.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.ItemDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDisabled.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDisabled.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.ItemDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageCategory.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.PageCategory.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageCategory.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageCategory.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageCategory.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageCategory.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageGroupCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.PageGroupCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageGroupCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageGroupCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageGroupCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageGroupCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barAndDockingController1.AppearancesRibbon.PageHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageHeader.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageHeader.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barAndDockingController1.AppearancesRibbon.PageHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barAndDockingController1.LookAndFeel.SkinName = "Blue";
+            this.barAndDockingController1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Skin;
+            this.barAndDockingController1.PaintStyleName = "WindowsXP";
+            this.barAndDockingController1.PropertiesBar.MenuAnimationType = DevExpress.XtraBars.AnimationType.System;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barDockControlTop.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barDockControlTop.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barDockControlTop.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barDockControlTop.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barDockControlTop.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1074, 48);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barDockControlBottom.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barDockControlBottom.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barDockControlBottom.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barDockControlBottom.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barDockControlBottom.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 551);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1074, 21);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barDockControlLeft.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barDockControlLeft.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barDockControlLeft.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barDockControlLeft.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barDockControlLeft.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 48);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 503);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.barDockControlRight.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.barDockControlRight.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.barDockControlRight.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.barDockControlRight.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.barDockControlRight.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1074, 48);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 503);
+            // 
+            // mnUsuNovo
+            // 
+            this.mnUsuNovo.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.mnUsuNovo.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuNovo.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuNovo.Caption = "Novo";
+            this.mnUsuNovo.Id = 10;
+            this.mnUsuNovo.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.mnUsuNovo.MenuAppearance.Menu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuNovo.MenuAppearance.Menu.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.Menu.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuNovo.MenuAppearance.Menu.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuNovo.MenuAppearance.Menu.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.Menu.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuNovo.MenuAppearance.MenuBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuNovo.MenuAppearance.MenuBar.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.MenuBar.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuNovo.MenuAppearance.MenuBar.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuNovo.MenuAppearance.MenuBar.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.MenuBar.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuNovo.MenuAppearance.MenuCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuNovo.MenuAppearance.MenuCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.MenuCaption.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuNovo.MenuAppearance.MenuCaption.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuNovo.MenuAppearance.MenuCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.MenuCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuNovo.MenuAppearance.SideStrip.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuNovo.MenuAppearance.SideStrip.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.SideStrip.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuNovo.MenuAppearance.SideStrip.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuNovo.MenuAppearance.SideStrip.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.SideStrip.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuNovo.MenuAppearance.SideStripNonRecent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.mnUsuNovo.MenuAppearance.SideStripNonRecent.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.SideStripNonRecent.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.mnUsuNovo.MenuAppearance.SideStripNonRecent.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.mnUsuNovo.MenuAppearance.SideStripNonRecent.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.mnUsuNovo.MenuAppearance.SideStripNonRecent.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.mnUsuNovo.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.Default;
+            this.mnUsuNovo.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.mnUsuNovo.Name = "mnUsuNovo";
+            this.mnUsuNovo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem3.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem3.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem3.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem3.Caption = "Locais";
+            this.barButtonItem3.Id = 13;
+            this.barButtonItem3.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem3.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barLargeButtonItem1
+            // 
+            this.barLargeButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barLargeButtonItem1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barLargeButtonItem1.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barLargeButtonItem1.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barLargeButtonItem1.Caption = "barLargeButtonItem1";
+            this.barLargeButtonItem1.CaptionAlignment = DevExpress.XtraBars.BarItemCaptionAlignment.Bottom;
+            this.barLargeButtonItem1.Id = 34;
+            this.barLargeButtonItem1.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barLargeButtonItem1.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            this.barLargeButtonItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // barButtonItem13
+            // 
+            this.barButtonItem13.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Default;
+            this.barButtonItem13.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem13.AppearanceDisabled.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.barButtonItem13.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Default;
+            this.barButtonItem13.Id = -1;
+            this.barButtonItem13.ItemClickFireMode = DevExpress.XtraBars.BarItemEventFireMode.Default;
+            this.barButtonItem13.MergeType = DevExpress.XtraBars.BarMenuMerge.Add;
+            this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            // 
+            // frmPrincipal
+            // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.Appearance.BorderColor = System.Drawing.Color.White;
+            this.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
+            this.Appearance.Options.UseImage = true;
+            this.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Default;
+            this.Appearance.TextOptions.Trimming = DevExpress.Utils.Trimming.Default;
+            this.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Default;
+            this.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Default;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageStore = global::telas.Properties.Resources.LOGO_SYS_NEWS_sem_fundo1;
+            this.ClientSize = new System.Drawing.Size(1074, 572);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
+            this.LookAndFeel.SkinName = "Blue";
+            this.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Skin;
+            this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = ".:: SYSNEWS ::. Seu Administrador de Bancas de Revistas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Timer tmRelogio;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.Bar barFerramentas;
+        private DevExpress.XtraBars.Bar barMenus;
+        private DevExpress.XtraBars.Bar barStatus;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarSubItem mnCadastros;
+        private DevExpress.XtraBars.BarSubItem mnVendas;
+        private DevExpress.XtraBars.BarSubItem mnAjuda;
+        private DevExpress.XtraBars.BarSubItem mnSair;
+        private DevExpress.XtraBars.BarAndDockingController barAndDockingController1;
+        private DevExpress.XtraBars.BarStaticItem lblData;
+        private DevExpress.XtraBars.BarStaticItem lblHora;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarSubItem mnUsuarios;
+        private DevExpress.XtraBars.BarSubItem mnUsuNovo;
+        private DevExpress.XtraBars.BarSubItem mnUsuConsultar;
+        private DevExpress.XtraBars.BarButtonItem btnNovoUsuario;
+        private DevExpress.XtraBars.BarSubItem mnLocais;
+        private DevExpress.XtraBars.BarButtonItem btnNovoLocal;
+        private DevExpress.XtraBars.BarButtonItem btnConsultaLocal;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarSubItem mnCategorias;
+        private DevExpress.XtraBars.BarButtonItem btnNovaCategoria;
+        private DevExpress.XtraBars.BarButtonItem btnConsultarCategoria;
+        private DevExpress.XtraBars.BarSubItem mnSetores;
+        private DevExpress.XtraBars.BarButtonItem btnNovoSetor;
+        private DevExpress.XtraBars.BarButtonItem btnConsultarSetor;
+        private DevExpress.XtraBars.BarButtonItem btnSobre;
+        private DevExpress.XtraBars.BarSubItem mnEstoque;
+        private DevExpress.XtraBars.BarButtonItem btnEntradaProduto;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarSubItem barSubItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
+        private DevExpress.XtraBars.BarSubItem barSubItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem15;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem16;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem17;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem18;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
+        private DevExpress.XtraBars.BarButtonItem btnControleEstoque;
+        public DevExpress.XtraBars.BarStaticItem lblStatus;
+       
+    }
+}

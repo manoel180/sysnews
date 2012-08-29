@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sysnewsModel1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="sysnewsEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categorias" EntityType="sysnewsModel1.Categorias" />
+    <EntitySet Name="Clientes" EntityType="sysnewsModel1.Clientes" />
+    <EntitySet Name="FormasPagamentos" EntityType="sysnewsModel1.FormasPagamentos" />
+    <EntitySet Name="Fornecedores" EntityType="sysnewsModel1.Fornecedores" />
+    <EntitySet Name="Locais" EntityType="sysnewsModel1.Locais" />
+    <EntitySet Name="Perfis" EntityType="sysnewsModel1.Perfis" />
+    <EntitySet Name="Produtos" EntityType="sysnewsModel1.Produtos" />
+    <EntitySet Name="Setores" EntityType="sysnewsModel1.Setores" />
+    <EntitySet Name="Usuarios" EntityType="sysnewsModel1.Usuarios" />
+    <EntitySet Name="Vendas" EntityType="sysnewsModel1.Vendas" />
+    <EntitySet Name="Vendedores" EntityType="sysnewsModel1.Vendedores" />
+    <AssociationSet Name="FK_Produtos_Categorias" Association="sysnewsModel1.FK_Produtos_Categorias">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Produtos" EntitySet="Produtos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_Setores" Association="sysnewsModel1.FK_Clientes_Setores">
+      <End Role="Setores" EntitySet="Setores" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendas_FormasPagamentos" Association="sysnewsModel1.FK_Vendas_FormasPagamentos">
+      <End Role="FormasPagamentos" EntitySet="FormasPagamentos" />
+      <End Role="Vendas" EntitySet="Vendas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produtos_Fornecedores" Association="sysnewsModel1.FK_Produtos_Fornecedores">
+      <End Role="Fornecedores" EntitySet="Fornecedores" />
+      <End Role="Produtos" EntitySet="Produtos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produtos_Locais" Association="sysnewsModel1.FK_Produtos_Locais">
+      <End Role="Locais" EntitySet="Locais" />
+      <End Role="Produtos" EntitySet="Produtos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Perfis" Association="sysnewsModel1.FK_Usuarios_Perfis">
+      <End Role="Perfis" EntitySet="Perfis" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendas_Produtos" Association="sysnewsModel1.FK_Vendas_Produtos">
+      <End Role="Produtos" EntitySet="Produtos" />
+      <End Role="Vendas" EntitySet="Vendas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendas_Usuarios" Association="sysnewsModel1.FK_Vendas_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Vendas" EntitySet="Vendas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendedores_Usuarios" Association="sysnewsModel1.FK_Vendedores_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Vendedores" EntitySet="Vendedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vendas_Vendedores" Association="sysnewsModel1.FK_Vendas_Vendedores">
+      <End Role="Vendedores" EntitySet="Vendedores" />
+      <End Role="Vendas" EntitySet="Vendas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categorias">
+    <Key>
+      <PropertyRef Name="idCategorias" />
+    </Key>
+    <Property Name="idCategorias" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descricao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Produtos" Relationship="sysnewsModel1.FK_Produtos_Categorias" FromRole="Categorias" ToRole="Produtos" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="idClientes" />
+    </Key>
+    <Property Name="idClientes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matricula" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="endereco" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="tel_fixo" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="tel_celular" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="status" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="setor" Type="Int32" />
+    <NavigationProperty Name="Setores" Relationship="sysnewsModel1.FK_Clientes_Setores" FromRole="Clientes" ToRole="Setores" />
+  </EntityType>
+  <EntityType Name="FormasPagamentos">
+    <Key>
+      <PropertyRef Name="idFormaPagamento" />
+    </Key>
+    <Property Name="idFormaPagamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Vendas" Relationship="sysnewsModel1.FK_Vendas_FormasPagamentos" FromRole="FormasPagamentos" ToRole="Vendas" />
+  </EntityType>
+  <EntityType Name="Fornecedores">
+    <Key>
+      <PropertyRef Name="idFornecedores" />
+    </Key>
+    <Property Name="idFornecedores" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Produtos" Relationship="sysnewsModel1.FK_Produtos_Fornecedores" FromRole="Fornecedores" ToRole="Produtos" />
+  </EntityType>
+  <EntityType Name="Locais">
+    <Key>
+      <PropertyRef Name="idLocal" />
+    </Key>
+    <Property Name="idLocal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="loc_descricao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Produtos" Relationship="sysnewsModel1.FK_Produtos_Locais" FromRole="Locais" ToRole="Produtos" />
+  </EntityType>
+  <EntityType Name="Perfis">
+    <Key>
+      <PropertyRef Name="idPerfil" />
+    </Key>
+    <Property Name="idPerfil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descricao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Usuarios" Relationship="sysnewsModel1.FK_Usuarios_Perfis" FromRole="Perfis" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Produtos">
+    <Key>
+      <PropertyRef Name="idProduto" />
+    </Key>
+    <Property Name="idProduto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="preco" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="quantidade" Type="Int32" Nullable="false" />
+    <Property Name="categoria" Type="Int32" Nullable="false" />
+    <Property Name="local" Type="Int32" Nullable="false" />
+    <Property Name="codigo_barra" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="fornecedor" Type="Int32" />
+    <Property Name="dt_validade" Type="DateTime" />
+    <Property Name="quantidade_minimo" Type="Int32" Nullable="false" />
+    <Property Name="preco_compra" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Categorias" Relationship="sysnewsModel1.FK_Produtos_Categorias" FromRole="Produtos" ToRole="Categorias" />
+    <NavigationProperty Name="Fornecedores" Relationship="sysnewsModel1.FK_Produtos_Fornecedores" FromRole="Produtos" ToRole="Fornecedores" />
+    <NavigationProperty Name="Locais" Relationship="sysnewsModel1.FK_Produtos_Locais" FromRole="Produtos" ToRole="Locais" />
+    <NavigationProperty Name="Vendas" Relationship="sysnewsModel1.FK_Vendas_Produtos" FromRole="Produtos" ToRole="Vendas" />
+  </EntityType>
+  <EntityType Name="Setores">
+    <Key>
+      <PropertyRef Name="idSetores" />
+    </Key>
+    <Property Name="idSetores" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descricao" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="chefe" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="telefone" Type="String" MaxLength="9" Unicode="false" FixedLength="true" />
+    <Property Name="ramal" Type="String" MaxLength="5" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Clientes" Relationship="sysnewsModel1.FK_Clientes_Setores" FromRole="Setores" ToRole="Clientes" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="idUsuarios" />
+    </Key>
+    <Property Name="idUsuarios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="login" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="senha" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="perfil" Type="Int32" />
+    <NavigationProperty Name="Perfis" Relationship="sysnewsModel1.FK_Usuarios_Perfis" FromRole="Usuarios" ToRole="Perfis" />
+    <NavigationProperty Name="Vendas" Relationship="sysnewsModel1.FK_Vendas_Usuarios" FromRole="Usuarios" ToRole="Vendas" />
+    <NavigationProperty Name="Vendedores" Relationship="sysnewsModel1.FK_Vendedores_Usuarios" FromRole="Usuarios" ToRole="Vendedores" />
+  </EntityType>
+  <EntityType Name="Vendas">
+    <Key>
+      <PropertyRef Name="idVenda" />
+    </Key>
+    <Property Name="idVenda" Type="Int32" Nullable="false" />
+    <Property Name="qtdProduto" Type="Int32" />
+    <Property Name="valorProduto" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="data" Type="DateTime" />
+    <Property Name="hora" Type="Time" />
+    <Property Name="produto" Type="Int32" />
+    <Property Name="vendedor" Type="Int32" />
+    <Property Name="usuario" Type="Int32" />
+    <Property Name="cliente" Type="Int32" />
+    <Property Name="formaPagamento" Type="Int32" />
+    <NavigationProperty Name="FormasPagamentos" Relationship="sysnewsModel1.FK_Vendas_FormasPagamentos" FromRole="Vendas" ToRole="FormasPagamentos" />
+    <NavigationProperty Name="Produtos" Relationship="sysnewsModel1.FK_Vendas_Produtos" FromRole="Vendas" ToRole="Produtos" />
+    <NavigationProperty Name="Usuarios" Relationship="sysnewsModel1.FK_Vendas_Usuarios" FromRole="Vendas" ToRole="Usuarios" />
+    <NavigationProperty Name="Vendedores" Relationship="sysnewsModel1.FK_Vendas_Vendedores" FromRole="Vendas" ToRole="Vendedores" />
+  </EntityType>
+  <EntityType Name="Vendedores">
+    <Key>
+      <PropertyRef Name="idVendedores" />
+    </Key>
+    <Property Name="idVendedores" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="endereco" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="telefone" Type="String" MaxLength="9" Unicode="false" FixedLength="true" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="usuario" Type="Int32" />
+    <NavigationProperty Name="Usuarios" Relationship="sysnewsModel1.FK_Vendedores_Usuarios" FromRole="Vendedores" ToRole="Usuarios" />
+    <NavigationProperty Name="Vendas" Relationship="sysnewsModel1.FK_Vendas_Vendedores" FromRole="Vendedores" ToRole="Vendas" />
+  </EntityType>
+  <Association Name="FK_Produtos_Categorias">
+    <End Role="Categorias" Type="sysnewsModel1.Categorias" Multiplicity="1" />
+    <End Role="Produtos" Type="sysnewsModel1.Produtos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="idCategorias" />
+      </Principal>
+      <Dependent Role="Produtos">
+        <PropertyRef Name="categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_Setores">
+    <End Role="Setores" Type="sysnewsModel1.Setores" Multiplicity="0..1" />
+    <End Role="Clientes" Type="sysnewsModel1.Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setores">
+        <PropertyRef Name="idSetores" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="setor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendas_FormasPagamentos">
+    <End Role="FormasPagamentos" Type="sysnewsModel1.FormasPagamentos" Multiplicity="0..1" />
+    <End Role="Vendas" Type="sysnewsModel1.Vendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormasPagamentos">
+        <PropertyRef Name="idFormaPagamento" />
+      </Principal>
+      <Dependent Role="Vendas">
+        <PropertyRef Name="formaPagamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produtos_Fornecedores">
+    <End Role="Fornecedores" Type="sysnewsModel1.Fornecedores" Multiplicity="0..1" />
+    <End Role="Produtos" Type="sysnewsModel1.Produtos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedores">
+        <PropertyRef Name="idFornecedores" />
+      </Principal>
+      <Dependent Role="Produtos">
+        <PropertyRef Name="fornecedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produtos_Locais">
+    <End Role="Locais" Type="sysnewsModel1.Locais" Multiplicity="1" />
+    <End Role="Produtos" Type="sysnewsModel1.Produtos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locais">
+        <PropertyRef Name="idLocal" />
+      </Principal>
+      <Dependent Role="Produtos">
+        <PropertyRef Name="local" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Perfis">
+    <End Role="Perfis" Type="sysnewsModel1.Perfis" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="sysnewsModel1.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfis">
+        <PropertyRef Name="idPerfil" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="perfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendas_Produtos">
+    <End Role="Produtos" Type="sysnewsModel1.Produtos" Multiplicity="0..1" />
+    <End Role="Vendas" Type="sysnewsModel1.Vendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produtos">
+        <PropertyRef Name="idProduto" />
+      </Principal>
+      <Dependent Role="Vendas">
+        <PropertyRef Name="produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendas_Usuarios">
+    <End Role="Usuarios" Type="sysnewsModel1.Usuarios" Multiplicity="0..1" />
+    <End Role="Vendas" Type="sysnewsModel1.Vendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarios" />
+      </Principal>
+      <Dependent Role="Vendas">
+        <PropertyRef Name="usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendedores_Usuarios">
+    <End Role="Usuarios" Type="sysnewsModel1.Usuarios" Multiplicity="0..1" />
+    <End Role="Vendedores" Type="sysnewsModel1.Vendedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="idUsuarios" />
+      </Principal>
+      <Dependent Role="Vendedores">
+        <PropertyRef Name="usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vendas_Vendedores">
+    <End Role="Vendedores" Type="sysnewsModel1.Vendedores" Multiplicity="0..1" />
+    <End Role="Vendas" Type="sysnewsModel1.Vendas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendedores">
+        <PropertyRef Name="idVendedores" />
+      </Principal>
+      <Dependent Role="Vendas">
+        <PropertyRef Name="vendedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

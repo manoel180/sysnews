@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="sysnewsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="sysnewsModelStoreContainer">
+          <EntitySet Name="Categorias" EntityType="sysnewsModel.Store.Categorias" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Clientes" EntityType="sysnewsModel.Store.Clientes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FormasPagamentos" EntityType="sysnewsModel.Store.FormasPagamentos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Fornecedores" EntityType="sysnewsModel.Store.Fornecedores" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ItemVendas" EntityType="sysnewsModel.Store.ItemVendas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Locais" EntityType="sysnewsModel.Store.Locais" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Perfis" EntityType="sysnewsModel.Store.Perfis" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Produtos" EntityType="sysnewsModel.Store.Produtos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Setores" EntityType="sysnewsModel.Store.Setores" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Turnos" EntityType="sysnewsModel.Store.Turnos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuarios" EntityType="sysnewsModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vendas" EntityType="sysnewsModel.Store.Vendas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vendedores" EntityType="sysnewsModel.Store.Vendedores" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Clientes_Setores" Association="sysnewsModel.Store.FK_Clientes_Setores">
+            <End Role="Setores" EntitySet="Setores" />
+            <End Role="Clientes" EntitySet="Clientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Item_Vendas_Produtos" Association="sysnewsModel.Store.FK_Item_Vendas_Produtos">
+            <End Role="Produtos" EntitySet="Produtos" />
+            <End Role="ItemVendas" EntitySet="ItemVendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemVendas_Vendas" Association="sysnewsModel.Store.FK_ItemVendas_Vendas">
+            <End Role="Vendas" EntitySet="Vendas" />
+            <End Role="ItemVendas" EntitySet="ItemVendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Produtos_Categorias" Association="sysnewsModel.Store.FK_Produtos_Categorias">
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Produtos" EntitySet="Produtos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Produtos_Fornecedores" Association="sysnewsModel.Store.FK_Produtos_Fornecedores">
+            <End Role="Fornecedores" EntitySet="Fornecedores" />
+            <End Role="Produtos" EntitySet="Produtos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Produtos_Locais" Association="sysnewsModel.Store.FK_Produtos_Locais">
+            <End Role="Locais" EntitySet="Locais" />
+            <End Role="Produtos" EntitySet="Produtos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TurnosClientes" Association="sysnewsModel.Store.FK_TurnosClientes">
+            <End Role="Turnos" EntitySet="Turnos" />
+            <End Role="Clientes" EntitySet="Clientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuarios_Perfis" Association="sysnewsModel.Store.FK_Usuarios_Perfis">
+            <End Role="Perfis" EntitySet="Perfis" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendas_Clientes" Association="sysnewsModel.Store.FK_Vendas_Clientes">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Vendas" EntitySet="Vendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendas_FormasPagamentos" Association="sysnewsModel.Store.FK_Vendas_FormasPagamentos">
+            <End Role="FormasPagamentos" EntitySet="FormasPagamentos" />
+            <End Role="Vendas" EntitySet="Vendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendas_Usuarios" Association="sysnewsModel.Store.FK_Vendas_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Vendas" EntitySet="Vendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendas_Vendedores" Association="sysnewsModel.Store.FK_Vendas_Vendedores">
+            <End Role="Vendedores" EntitySet="Vendedores" />
+            <End Role="Vendas" EntitySet="Vendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendedores_Usuarios" Association="sysnewsModel.Store.FK_Vendedores_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Vendedores" EntitySet="Vendedores" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categorias">
+          <Key>
+            <PropertyRef Name="idCategorias" />
+          </Key>
+          <Property Name="idCategorias" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="idClientes" />
+          </Key>
+          <Property Name="idClientes" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="matricula" Type="int" Nullable="false" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="90" />
+          <Property Name="endereco" Type="varchar" MaxLength="150" />
+          <Property Name="tel_fixo" Type="varchar" MaxLength="9" />
+          <Property Name="tel_celular" Type="varchar" MaxLength="9" />
+          <Property Name="status" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="setor" Type="int" Nullable="false" />
+          <Property Name="sexo" Type="smallint" />
+          <Property Name="Turnos_idTurno" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FormasPagamentos">
+          <Key>
+            <PropertyRef Name="idFormaPagamento" />
+          </Key>
+          <Property Name="idFormaPagamento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Fornecedores">
+          <Key>
+            <PropertyRef Name="idFornecedores" />
+          </Key>
+          <Property Name="idFornecedores" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ItemVendas">
+          <Key>
+            <PropertyRef Name="id_Item_venda" />
+          </Key>
+          <Property Name="id_Item_venda" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idProduto" Type="int" Nullable="false" />
+          <Property Name="valor" Type="decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="quantidade" Type="int" Nullable="false" />
+          <Property Name="idVenda" Type="int" Nullable="false" />
+          <Property Name="nome_Produto" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Locais">
+          <Key>
+            <PropertyRef Name="idLocal" />
+          </Key>
+          <Property Name="idLocal" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="loc_descricao" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Perfis">
+          <Key>
+            <PropertyRef Name="idPerfil" />
+          </Key>
+          <Property Name="idPerfil" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Produtos">
+          <Key>
+            <PropertyRef Name="idProduto" />
+          </Key>
+          <Property Name="idProduto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="preco" Type="decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="quantidade" Type="int" Nullable="false" />
+          <Property Name="categoria" Type="int" Nullable="false" />
+          <Property Name="local" Type="int" Nullable="false" />
+          <Property Name="codigo_barra" Type="varchar" MaxLength="14" />
+          <Property Name="fornecedor" Type="int" />
+          <Property Name="dt_validade" Type="datetime" />
+          <Property Name="quantidade_minimo" Type="int" Nullable="false" />
+          <Property Name="preco_compra" Type="decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Setores">
+          <Key>
+            <PropertyRef Name="idSetores" />
+          </Key>
+          <Property Name="idSetores" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="chefe" Type="varchar" MaxLength="50" />
+          <Property Name="telefone" Type="char" MaxLength="9" />
+          <Property Name="ramal" Type="char" MaxLength="5" />
+          <Property Name="turno" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Turnos">
+          <Key>
+            <PropertyRef Name="idTurno" />
+          </Key>
+          <Property Name="idTurno" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="descricao" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="idUsuarios" />
+          </Key>
+          <Property Name="idUsuarios" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="login" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="senha" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="perfil" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vendas">
+          <Key>
+            <PropertyRef Name="idVenda" />
+          </Key>
+          <Property Name="idVenda" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="hora" Type="time" Nullable="false" />
+          <Property Name="vendedor" Type="int" Nullable="false" />
+          <Property Name="usuario" Type="int" Nullable="false" />
+          <Property Name="cliente" Type="int" Nullable="false" />
+          <Property Name="formaPagamento" Type="int" Nullable="false" />
+          <Property Name="valorvenda" Type="decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Vendedores">
+          <Key>
+            <PropertyRef Name="idVendedores" />
+          </Key>
+          <Property Name="idVendedores" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="endereco" Type="varchar" MaxLength="50" />
+          <Property Name="telefone" Type="char" MaxLength="9" />
+          <Property Name="status" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="usuario" Type="int" />
+        </EntityType>
+        <Association Name="FK_Clientes_Setores">
+          <End Role="Setores" Type="sysnewsModel.Store.Setores" Multiplicity="1" />
+          <End Role="Clientes" Type="sysnewsModel.Store.Clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Setores">
+              <PropertyRef Name="idSetores" />
+            </Principal>
+            <Dependent Role="Clientes">
+              <PropertyRef Name="setor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Item_Vendas_Produtos">
+          <End Role="Produtos" Type="sysnewsModel.Store.Produtos" Multiplicity="1" />
+          <End Role="ItemVendas" Type="sysnewsModel.Store.ItemVendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produtos">
+              <PropertyRef Name="idProduto" />
+            </Principal>
+            <Dependent Role="ItemVendas">
+              <PropertyRef Name="idProduto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemVendas_Vendas">
+          <End Role="Vendas" Type="sysnewsModel.Store.Vendas" Multiplicity="1" />
+          <End Role="ItemVendas" Type="sysnewsModel.Store.ItemVendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendas">
+              <PropertyRef Name="idVenda" />
+            </Principal>
+            <Dependent Role="ItemVendas">
+              <PropertyRef Name="idVenda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Produtos_Categorias">
+          <End Role="Categorias" Type="sysnewsModel.Store.Categorias" Multiplicity="1" />
+          <End Role="Produtos" Type="sysnewsModel.Store.Produtos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorias">
+              <PropertyRef Name="idCategorias" />
+            </Principal>
+            <Dependent Role="Produtos">
+              <PropertyRef Name="categoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Produtos_Fornecedores">
+          <End Role="Fornecedores" Type="sysnewsModel.Store.Fornecedores" Multiplicity="0..1" />
+          <End Role="Produtos" Type="sysnewsModel.Store.Produtos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fornecedores">
+              <PropertyRef Name="idFornecedores" />
+            </Principal>
+            <Dependent Role="Produtos">
+              <PropertyRef Name="fornecedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Produtos_Locais">
+          <End Role="Locais" Type="sysnewsModel.Store.Locais" Multiplicity="1" />
+          <End Role="Produtos" Type="sysnewsModel.Store.Produtos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locais">
+              <PropertyRef Name="idLocal" />
+            </Principal>
+            <Dependent Role="Produtos">
+              <PropertyRef Name="local" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TurnosClientes">
+          <End Role="Turnos" Type="sysnewsModel.Store.Turnos" Multiplicity="1" />
+          <End Role="Clientes" Type="sysnewsModel.Store.Clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turnos">
+              <PropertyRef Name="idTurno" />
+            </Principal>
+            <Dependent Role="Clientes">
+              <PropertyRef Name="Turnos_idTurno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuarios_Perfis">
+          <End Role="Perfis" Type="sysnewsModel.Store.Perfis" Multiplicity="1" />
+          <End Role="Usuarios" Type="sysnewsModel.Store.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfis">
+              <PropertyRef Name="idPerfil" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendas_Clientes">
+          <End Role="Clientes" Type="sysnewsModel.Store.Clientes" Multiplicity="1" />
+          <End Role="Vendas" Type="sysnewsModel.Store.Vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="idClientes" />
+            </Principal>
+            <Dependent Role="Vendas">
+              <PropertyRef Name="cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendas_FormasPagamentos">
+          <End Role="FormasPagamentos" Type="sysnewsModel.Store.FormasPagamentos" Multiplicity="1" />
+          <End Role="Vendas" Type="sysnewsModel.Store.Vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormasPagamentos">
+              <PropertyRef Name="idFormaPagamento" />
+            </Principal>
+            <Dependent Role="Vendas">
+              <PropertyRef Name="formaPagamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendas_Usuarios">
+          <End Role="Usuarios" Type="sysnewsModel.Store.Usuarios" Multiplicity="1" />
+          <End Role="Vendas" Type="sysnewsModel.Store.Vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="idUsuarios" />
+            </Principal>
+            <Dependent Role="Vendas">
+              <PropertyRef Name="usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendas_Vendedores">
+          <End Role="Vendedores" Type="sysnewsModel.Store.Vendedores" Multiplicity="1" />
+          <End Role="Vendas" Type="sysnewsModel.Store.Vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendedores">
+              <PropertyRef Name="idVendedores" />
+            </Principal>
+            <Dependent Role="Vendas">
+              <PropertyRef Name="vendedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendedores_Usuarios">
+          <End Role="Usuarios" Type="sysnewsModel.Store.Usuarios" Multiplicity="0..1" />
+          <End Role="Vendedores" Type="sysnewsModel.Store.Vendedores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="idUsuarios" />
+            </Principal>
+            <Dependent Role="Vendedores">
+              <PropertyRef Name="usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DAL" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="sysnewsEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Categorias" EntityType="DAL.Categorias" />
+          <EntitySet Name="Clientes" EntityType="DAL.Clientes" />
+          <EntitySet Name="FormasPagamentos" EntityType="DAL.FormasPagamentos" />
+          <EntitySet Name="Fornecedores" EntityType="DAL.Fornecedores" />
+          <EntitySet Name="ItemVendas" EntityType="DAL.ItemVendas" />
+          <EntitySet Name="Locais" EntityType="DAL.Locais" />
+          <EntitySet Name="Perfis" EntityType="DAL.Perfis" />
+          <EntitySet Name="Produtos" EntityType="DAL.Produtos" />
+          <EntitySet Name="Setores" EntityType="DAL.Setores" />
+          <EntitySet Name="Turnos" EntityType="DAL.Turnos" />
+          <EntitySet Name="Vendas" EntityType="DAL.Vendas" />
+          <AssociationSet Name="FK_Produtos_Categorias" Association="DAL.FK_Produtos_Categorias">
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Produtos" EntitySet="Produtos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clientes_Setores" Association="DAL.FK_Clientes_Setores">
+            <End Role="Setores" EntitySet="Setores" />
+            <End Role="Clientes" EntitySet="Clientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TurnosClientes" Association="DAL.FK_TurnosClientes">
+            <End Role="Turnos" EntitySet="Turnos" />
+            <End Role="Clientes" EntitySet="Clientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendas_Clientes" Association="DAL.FK_Vendas_Clientes">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Vendas" EntitySet="Vendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendas_FormasPagamentos" Association="DAL.FK_Vendas_FormasPagamentos">
+            <End Role="FormasPagamentos" EntitySet="FormasPagamentos" />
+            <End Role="Vendas" EntitySet="Vendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Produtos_Fornecedores" Association="DAL.FK_Produtos_Fornecedores">
+            <End Role="Fornecedores" EntitySet="Fornecedores" />
+            <End Role="Produtos" EntitySet="Produtos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Item_Vendas_Produtos" Association="DAL.FK_Item_Vendas_Produtos">
+            <End Role="Produtos" EntitySet="Produtos" />
+            <End Role="ItemVendas" EntitySet="ItemVendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ItemVendas_Vendas" Association="DAL.FK_ItemVendas_Vendas">
+            <End Role="Vendas" EntitySet="Vendas" />
+            <End Role="ItemVendas" EntitySet="ItemVendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Produtos_Locais" Association="DAL.FK_Produtos_Locais">
+            <End Role="Locais" EntitySet="Locais" />
+            <End Role="Produtos" EntitySet="Produtos" />
+          </AssociationSet>
+          <EntitySet Name="Usuarios" EntityType="DAL.Usuarios" />
+          <EntitySet Name="Vendedores" EntityType="DAL.Vendedores" />
+          <AssociationSet Name="FK_Usuarios_Perfis" Association="DAL.FK_Usuarios_Perfis">
+            <End Role="Perfis" EntitySet="Perfis" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendas_Usuarios" Association="DAL.FK_Vendas_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Vendas" EntitySet="Vendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendedores_Usuarios" Association="DAL.FK_Vendedores_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Vendedores" EntitySet="Vendedores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vendas_Vendedores" Association="DAL.FK_Vendas_Vendedores">
+            <End Role="Vendedores" EntitySet="Vendedores" />
+            <End Role="Vendas" EntitySet="Vendas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categorias">
+          <Key>
+            <PropertyRef Name="idCategorias" />
+          </Key>
+          <Property Type="Int32" Name="idCategorias" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descricao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Produtos" Relationship="DAL.FK_Produtos_Categorias" FromRole="Categorias" ToRole="Produtos" />
+        </EntityType>
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="idClientes" />
+          </Key>
+          <Property Type="Int32" Name="idClientes" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="matricula" Nullable="false" />
+          <Property Type="String" Name="nome" Nullable="false" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="endereco" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tel_fixo" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="tel_celular" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="setor" Nullable="false" />
+          <Property Type="Int16" Name="sexo" />
+          <Property Type="Int32" Name="Turnos_idTurno" Nullable="false" />
+          <NavigationProperty Name="Setores" Relationship="DAL.FK_Clientes_Setores" FromRole="Clientes" ToRole="Setores" />
+          <NavigationProperty Name="Turnos" Relationship="DAL.FK_TurnosClientes" FromRole="Clientes" ToRole="Turnos" />
+          <NavigationProperty Name="Vendas" Relationship="DAL.FK_Vendas_Clientes" FromRole="Clientes" ToRole="Vendas" />
+        </EntityType>
+        <EntityType Name="FormasPagamentos">
+          <Key>
+            <PropertyRef Name="idFormaPagamento" />
+          </Key>
+          <Property Type="Int32" Name="idFormaPagamento" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Vendas" Relationship="DAL.FK_Vendas_FormasPagamentos" FromRole="FormasPagamentos" ToRole="Vendas" />
+        </EntityType>
+        <EntityType Name="Fornecedores">
+          <Key>
+            <PropertyRef Name="idFornecedores" />
+          </Key>
+          <Property Type="Int32" Name="idFornecedores" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="nome" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Produtos" Relationship="DAL.FK_Produtos_Fornecedores" FromRole="Fornecedores" ToRole="Produtos" />
+        </EntityType>
+        <EntityType Name="ItemVendas">
+          <Key>
+            <PropertyRef Name="id_Item_venda" />
+          </Key>
+          <Property Type="Int32" Name="id_Item_venda" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="idProduto" Nullable="false" />
+          <Property Type="Decimal" Name="valor" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="quantidade" Nullable="false" />
+          <Property Type="Int32" Name="idVenda" Nullable="false" />
+          <Property Type="String" Name="nome_Produto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Produtos" Relationship="DAL.FK_Item_Vendas_Produtos" FromRole="ItemVendas" ToRole="Produtos" />
+          <NavigationProperty Name="Vendas" Relationship="DAL.FK_ItemVendas_Vendas" FromRole="ItemVendas" ToRole="Vendas" />
+        </EntityType>
+        <EntityType Name="Locais">
+          <Key>
+            <PropertyRef Name="idLocal" />
+          </Key>
+          <Property Type="Int32" Name="idLocal" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="loc_descricao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Produtos" Relationship="DAL.FK_Produtos_Locais" FromRole="Locais" ToRole="Produtos" />
+        </EntityType>
+        <EntityType Name="Perfis">
+          <Key>
+            <PropertyRef Name="idPerfil" />
+          </Key>
+          <Property Type="Int32" Name="idPerfil" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descricao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuarios" Relationship="DAL.FK_Usuarios_Perfis" FromRole="Perfis" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Produtos">
+          <Key>
+            <PropertyRef Name="idProduto" />
+          </Key>
+          <Property Type="Int32" Name="idProduto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="nome" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="preco" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="quantidade" Nullable="false" />
+          <Property Type="Int32" Name="categoria" Nullable="false" />
+          <Property Type="Int32" Name="local" Nullable="false" />
+          <Property Type="String" Name="codigo_barra" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="fornecedor" />
+          <Property Type="DateTime" Name="dt_validade" />
+          <Property Type="Int32" Name="quantidade_minimo" Nullable="false" />
+          <Property Type="Decimal" Name="preco_compra" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="Categorias" Relationship="DAL.FK_Produtos_Categorias" FromRole="Produtos" ToRole="Categorias" />
+          <NavigationProperty Name="Fornecedores" Relationship="DAL.FK_Produtos_Fornecedores" FromRole="Produtos" ToRole="Fornecedores" />
+          <NavigationProperty Name="ItemVendas" Relationship="DAL.FK_Item_Vendas_Produtos" FromRole="Produtos" ToRole="ItemVendas" />
+          <NavigationProperty Name="Locais" Relationship="DAL.FK_Produtos_Locais" FromRole="Produtos" ToRole="Locais" />
+        </EntityType>
+        <EntityType Name="Setores">
+          <Key>
+            <PropertyRef Name="idSetores" />
+          </Key>
+          <Property Type="Int32" Name="idSetores" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descricao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="chefe" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="telefone" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ramal" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="turno" Nullable="false" />
+          <NavigationProperty Name="Clientes" Relationship="DAL.FK_Clientes_Setores" FromRole="Setores" ToRole="Clientes" />
+        </EntityType>
+        <EntityType Name="Turnos">
+          <Key>
+            <PropertyRef Name="idTurno" />
+          </Key>
+          <Property Type="Int32" Name="idTurno" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="descricao" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Clientes" Relationship="DAL.FK_TurnosClientes" FromRole="Turnos" ToRole="Clientes" />
+        </EntityType>
+        <EntityType Name="Vendas">
+          <Key>
+            <PropertyRef Name="idVenda" />
+          </Key>
+          <Property Type="Int32" Name="idVenda" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="data" Nullable="false" />
+          <Property Type="Time" Name="hora" Nullable="false" />
+          <Property Type="Int32" Name="vendedor" Nullable="false" />
+          <Property Type="Int32" Name="usuario" Nullable="false" />
+          <Property Type="Int32" Name="cliente" Nullable="false" />
+          <Property Type="Int32" Name="formaPagamento" Nullable="false" />
+          <Property Type="Decimal" Name="valorvenda" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="Clientes" Relationship="DAL.FK_Vendas_Clientes" FromRole="Vendas" ToRole="Clientes" />
+          <NavigationProperty Name="FormasPagamentos" Relationship="DAL.FK_Vendas_FormasPagamentos" FromRole="Vendas" ToRole="FormasPagamentos" />
+          <NavigationProperty Name="ItemVendas" Relationship="DAL.FK_ItemVendas_Vendas" FromRole="Vendas" ToRole="ItemVendas" />
+          <NavigationProperty Name="Usuarios" Relationship="DAL.FK_Vendas_Usuarios" FromRole="Vendas" ToRole="Usuarios" />
+          <NavigationProperty Name="Vendedores" Relationship="DAL.FK_Vendas_Vendedores" FromRole="Vendas" ToRole="Vendedores" />
+        </EntityType>
+        <Association Name="FK_Produtos_Categorias">
+          <End Type="DAL.Categorias" Role="Categorias" Multiplicity="1" />
+          <End Type="DAL.Produtos" Role="Produtos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorias">
+              <PropertyRef Name="idCategorias" />
+            </Principal>
+            <Dependent Role="Produtos">
+              <PropertyRef Name="categoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clientes_Setores">
+          <End Type="DAL.Setores" Role="Setores" Multiplicity="1" />
+          <End Type="DAL.Clientes" Role="Clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Setores">
+              <PropertyRef Name="idSetores" />
+            </Principal>
+            <Dependent Role="Clientes">
+              <PropertyRef Name="setor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TurnosClientes">
+          <End Type="DAL.Turnos" Role="Turnos" Multiplicity="1" />
+          <End Type="DAL.Clientes" Role="Clientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turnos">
+              <PropertyRef Name="idTurno" />
+            </Principal>
+            <Dependent Role="Clientes">
+              <PropertyRef Name="Turnos_idTurno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendas_Clientes">
+          <End Type="DAL.Clientes" Role="Clientes" Multiplicity="1" />
+          <End Type="DAL.Vendas" Role="Vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="idClientes" />
+            </Principal>
+            <Dependent Role="Vendas">
+              <PropertyRef Name="cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendas_FormasPagamentos">
+          <End Type="DAL.FormasPagamentos" Role="FormasPagamentos" Multiplicity="1" />
+          <End Type="DAL.Vendas" Role="Vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FormasPagamentos">
+              <PropertyRef Name="idFormaPagamento" />
+            </Principal>
+            <Dependent Role="Vendas">
+              <PropertyRef Name="formaPagamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Produtos_Fornecedores">
+          <End Type="DAL.Fornecedores" Role="Fornecedores" Multiplicity="0..1" />
+          <End Type="DAL.Produtos" Role="Produtos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fornecedores">
+              <PropertyRef Name="idFornecedores" />
+            </Principal>
+            <Dependent Role="Produtos">
+              <PropertyRef Name="fornecedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Item_Vendas_Produtos">
+          <End Type="DAL.Produtos" Role="Produtos" Multiplicity="1" />
+          <End Type="DAL.ItemVendas" Role="ItemVendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produtos">
+              <PropertyRef Name="idProduto" />
+            </Principal>
+            <Dependent Role="ItemVendas">
+              <PropertyRef Name="idProduto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ItemVendas_Vendas">
+          <End Type="DAL.Vendas" Role="Vendas" Multiplicity="1" />
+          <End Type="DAL.ItemVendas" Role="ItemVendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendas">
+              <PropertyRef Name="idVenda" />
+            </Principal>
+            <Dependent Role="ItemVendas">
+              <PropertyRef Name="idVenda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Produtos_Locais">
+          <End Type="DAL.Locais" Role="Locais" Multiplicity="1" />
+          <End Type="DAL.Produtos" Role="Produtos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locais">
+              <PropertyRef Name="idLocal" />
+            </Principal>
+            <Dependent Role="Produtos">
+              <PropertyRef Name="local" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="idUsuarios" />
+          </Key>
+          <Property Type="Int32" Name="idUsuarios" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="nome" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="login" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="senha" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="perfil" Nullable="false" />
+          <NavigationProperty Name="Perfis" Relationship="DAL.FK_Usuarios_Perfis" FromRole="Usuarios" ToRole="Perfis" />
+          <NavigationProperty Name="Vendas" Relationship="DAL.FK_Vendas_Usuarios" FromRole="Usuarios" ToRole="Vendas" />
+          <NavigationProperty Name="Vendedores" Relationship="DAL.FK_Vendedores_Usuarios" FromRole="Usuarios" ToRole="Vendedores" />
+        </EntityType>
+        <EntityType Name="Vendedores">
+          <Key>
+            <PropertyRef Name="idVendedores" />
+          </Key>
+          <Property Type="Int32" Name="idVendedores" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="nome" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="endereco" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="telefone" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="usuario" />
+          <NavigationProperty Name="Usuarios" Relationship="DAL.FK_Vendedores_Usuarios" FromRole="Vendedores" ToRole="Usuarios" />
+          <NavigationProperty Name="Vendas" Relationship="DAL.FK_Vendas_Vendedores" FromRole="Vendedores" ToRole="Vendas" />
+        </EntityType>
+        <Association Name="FK_Usuarios_Perfis">
+          <End Type="DAL.Perfis" Role="Perfis" Multiplicity="1" />
+          <End Type="DAL.Usuarios" Role="Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfis">
+              <PropertyRef Name="idPerfil" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="perfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendas_Usuarios">
+          <End Type="DAL.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="DAL.Vendas" Role="Vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="idUsuarios" />
+            </Principal>
+            <Dependent Role="Vendas">
+              <PropertyRef Name="usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendedores_Usuarios">
+          <End Type="DAL.Usuarios" Role="Usuarios" Multiplicity="0..1" />
+          <End Type="DAL.Vendedores" Role="Vendedores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="idUsuarios" />
+            </Principal>
+            <Dependent Role="Vendedores">
+              <PropertyRef Name="usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vendas_Vendedores">
+          <End Type="DAL.Vendedores" Role="Vendedores" Multiplicity="1" />
+          <End Type="DAL.Vendas" Role="Vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendedores">
+              <PropertyRef Name="idVendedores" />
+            </Principal>
+            <Dependent Role="Vendas">
+              <PropertyRef Name="vendedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sysnewsModelStoreContainer" CdmEntityContainer="sysnewsEntities" >
+          <EntitySetMapping Name="Categorias">
+            <EntityTypeMapping TypeName="DAL.Categorias">
+              <MappingFragment StoreEntitySet="Categorias">
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="idCategorias" ColumnName="idCategorias" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clientes">
+            <EntityTypeMapping TypeName="DAL.Clientes">
+              <MappingFragment StoreEntitySet="Clientes">
+                <ScalarProperty Name="Turnos_idTurno" ColumnName="Turnos_idTurno" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="setor" ColumnName="setor" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="tel_celular" ColumnName="tel_celular" />
+                <ScalarProperty Name="tel_fixo" ColumnName="tel_fixo" />
+                <ScalarProperty Name="endereco" ColumnName="endereco" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="matricula" ColumnName="matricula" />
+                <ScalarProperty Name="idClientes" ColumnName="idClientes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormasPagamentos">
+            <EntityTypeMapping TypeName="DAL.FormasPagamentos">
+              <MappingFragment StoreEntitySet="FormasPagamentos">
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="idFormaPagamento" ColumnName="idFormaPagamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fornecedores">
+            <EntityTypeMapping TypeName="DAL.Fornecedores">
+              <MappingFragment StoreEntitySet="Fornecedores">
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="idFornecedores" ColumnName="idFornecedores" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemVendas">
+            <EntityTypeMapping TypeName="DAL.ItemVendas">
+              <MappingFragment StoreEntitySet="ItemVendas">
+                <ScalarProperty Name="nome_Produto" ColumnName="nome_Produto" />
+                <ScalarProperty Name="idVenda" ColumnName="idVenda" />
+                <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+                <ScalarProperty Name="id_Item_venda" ColumnName="id_Item_venda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locais">
+            <EntityTypeMapping TypeName="DAL.Locais">
+              <MappingFragment StoreEntitySet="Locais">
+                <ScalarProperty Name="loc_descricao" ColumnName="loc_descricao" />
+                <ScalarProperty Name="idLocal" ColumnName="idLocal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Perfis">
+            <EntityTypeMapping TypeName="DAL.Perfis">
+              <MappingFragment StoreEntitySet="Perfis">
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="idPerfil" ColumnName="idPerfil" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Produtos">
+            <EntityTypeMapping TypeName="DAL.Produtos">
+              <MappingFragment StoreEntitySet="Produtos">
+                <ScalarProperty Name="preco_compra" ColumnName="preco_compra" />
+                <ScalarProperty Name="quantidade_minimo" ColumnName="quantidade_minimo" />
+                <ScalarProperty Name="dt_validade" ColumnName="dt_validade" />
+                <ScalarProperty Name="fornecedor" ColumnName="fornecedor" />
+                <ScalarProperty Name="codigo_barra" ColumnName="codigo_barra" />
+                <ScalarProperty Name="local" ColumnName="local" />
+                <ScalarProperty Name="categoria" ColumnName="categoria" />
+                <ScalarProperty Name="quantidade" ColumnName="quantidade" />
+                <ScalarProperty Name="preco" ColumnName="preco" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Setores">
+            <EntityTypeMapping TypeName="DAL.Setores">
+              <MappingFragment StoreEntitySet="Setores">
+                <ScalarProperty Name="turno" ColumnName="turno" />
+                <ScalarProperty Name="ramal" ColumnName="ramal" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="chefe" ColumnName="chefe" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="idSetores" ColumnName="idSetores" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turnos">
+            <EntityTypeMapping TypeName="DAL.Turnos">
+              <MappingFragment StoreEntitySet="Turnos">
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="idTurno" ColumnName="idTurno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendas">
+            <EntityTypeMapping TypeName="DAL.Vendas">
+              <MappingFragment StoreEntitySet="Vendas">
+                <ScalarProperty Name="valorvenda" ColumnName="valorvenda" />
+                <ScalarProperty Name="formaPagamento" ColumnName="formaPagamento" />
+                <ScalarProperty Name="cliente" ColumnName="cliente" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="vendedor" ColumnName="vendedor" />
+                <ScalarProperty Name="hora" ColumnName="hora" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="idVenda" ColumnName="idVenda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="DAL.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="perfil" ColumnName="perfil" />
+                <ScalarProperty Name="senha" ColumnName="senha" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="idUsuarios" ColumnName="idUsuarios" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendedores">
+            <EntityTypeMapping TypeName="DAL.Vendedores">
+              <MappingFragment StoreEntitySet="Vendedores">
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="endereco" ColumnName="endereco" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="idVendedores" ColumnName="idVendedores" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="sysnewBD" >
+        <EntityTypeShape EntityType="DAL.Categorias" Width="1.5" PointX="3" PointY="15.375" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="DAL.Clientes" Width="1.5" PointX="3" PointY="1" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="DAL.FormasPagamentos" Width="1.5" PointX="3" PointY="6.125" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="DAL.Fornecedores" Width="1.5" PointX="3" PointY="17.75" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="DAL.ItemVendas" Width="1.5" PointX="7.5" PointY="1.5" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="DAL.Locais" Width="1.5" PointX="3" PointY="20.125" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="DAL.Perfis" Width="1.5" PointX="0.75" PointY="8.875" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="DAL.Produtos" Width="1.5" PointX="5.25" PointY="16.625" Height="3.903300781249996" />
+        <EntityTypeShape EntityType="DAL.Setores" Width="1.5" PointX="0.75" PointY="1.625" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="DAL.Turnos" Width="1.5" PointX="0.75" PointY="6" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="DAL.Vendas" Width="1.5" PointX="5.25" PointY="1" Height="3.5186979166666674" />
+        <AssociationConnector Association="DAL.FK_Produtos_Categorias" >
+          <ConnectorPoint PointX="4.5" PointY="16.797841796875" />
+          <ConnectorPoint PointX="5.25" PointY="16.797841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_Clientes_Setores" >
+          <ConnectorPoint PointX="2.25" PointY="2.8074446614583337" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="2.8074446614583333" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="2.8074446614583337" />
+          <ConnectorPoint PointX="3" PointY="2.8074446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_TurnosClientes" >
+          <ConnectorPoint PointX="2.25" PointY="6" />
+          <ConnectorPoint PointX="2.625" PointY="5.625" />
+          <ConnectorPoint PointX="2.625" PointY="1.8724703307291732" />
+          <ConnectorPoint PointX="3" PointY="1.8724703307291732" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_Vendas_Clientes" >
+          <ConnectorPoint PointX="4.5" PointY="2.7593489583333328" />
+          <ConnectorPoint PointX="5.25" PointY="2.7593489583333328" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_Vendas_FormasPagamentos" >
+          <ConnectorPoint PointX="4.5" PointY="6.9228417968750016" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="6.9228417968750007" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="6.9228417968750016" />
+          <ConnectorPoint PointX="6" PointY="6.9228417968750016" />
+          <ConnectorPoint PointX="6" PointY="4.5186979166666656" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_Produtos_Fornecedores" >
+          <ConnectorPoint PointX="4.5" PointY="18.547841796875" />
+          <ConnectorPoint PointX="5.25" PointY="18.547841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_Item_Vendas_Produtos" >
+          <ConnectorPoint PointX="6.75" PointY="18.576650390624998" />
+          <ConnectorPoint PointX="8.25" PointY="18.576650390624998" />
+          <ConnectorPoint PointX="8.25" PointY="4.0571907552083388" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_ItemVendas_Vendas" >
+          <ConnectorPoint PointX="6.75" PointY="2.7785953776041694" />
+          <ConnectorPoint PointX="7.5" PointY="2.7785953776041694" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_Produtos_Locais" >
+          <ConnectorPoint PointX="4.5" PointY="20.326650390624998" />
+          <ConnectorPoint PointX="5.25" PointY="20.326650390624998" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="DAL.Usuarios" Width="1.5" PointX="3" PointY="9.375" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="DAL.Vendedores" Width="1.5" PointX="5.25" PointY="9.375" Height="2.5571907552083388" />
+        <AssociationConnector Association="DAL.FK_Usuarios_Perfis" >
+          <ConnectorPoint PointX="2.25" PointY="9.922841796875" />
+          <ConnectorPoint PointX="3" PointY="9.922841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_Vendas_Usuarios" >
+          <ConnectorPoint PointX="4.5" PointY="9.3761528461538468" />
+          <ConnectorPoint PointX="4.875" PointY="9.0011528461538468" />
+          <ConnectorPoint PointX="4.875" PointY="3.6702754374999929" />
+          <ConnectorPoint PointX="5.25" PointY="3.6702754374999929" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_Vendedores_Usuarios" >
+          <ConnectorPoint PointX="4.5" PointY="10.685424300681079" />
+          <ConnectorPoint PointX="5.25" PointY="10.685424300681079" />
+        </AssociationConnector>
+        <AssociationConnector Association="DAL.FK_Vendas_Vendedores" >
+          <ConnectorPoint PointX="6.4375" PointY="9.375" />
+          <ConnectorPoint PointX="6.4375" PointY="4.5186979166666656" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
