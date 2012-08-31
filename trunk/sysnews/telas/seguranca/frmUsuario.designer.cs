@@ -32,6 +32,7 @@
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule compareAgainstControlValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
             this.txtSenha = new DevExpress.XtraEditors.TextEdit();
             this.gdvTabela = new DevExpress.XtraGrid.GridControl();
             this.gridTabela = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -49,6 +50,8 @@
             this.txtRepetirSenha = new DevExpress.XtraEditors.TextEdit();
             this.lblPerfil = new DevExpress.XtraEditors.LabelControl();
             this.cmbPerfis = new System.Windows.Forms.ComboBox();
+            this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
+            this.lblCodigo = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.cmbFiltros.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPesquisa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPanel)).BeginInit();
@@ -67,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNome.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRepetirSenha.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloCadastro
@@ -100,6 +104,7 @@
             // 
             this.tabPanel.AppearancePage.Header.Font = new System.Drawing.Font("Tahoma", 10F);
             this.tabPanel.AppearancePage.Header.Options.UseFont = true;
+            this.tabPanel.SelectedTabPage = this.tabConsulta;
             // 
             // tabConsulta
             // 
@@ -118,6 +123,7 @@
             // 
             this.btnNovo.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.Appearance.Options.UseFont = true;
+            this.btnNovo.Image = global::telas.Properties.Resources.btn_add_usuarios;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
@@ -145,6 +151,8 @@
             // 
             this.panel.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panel.Appearance.Options.UseBackColor = true;
+            this.panel.Controls.Add(this.txtCodigo);
+            this.panel.Controls.Add(this.lblCodigo);
             this.panel.Controls.Add(this.cmbPerfis);
             this.panel.Controls.Add(this.txtNome);
             this.panel.Controls.Add(this.lblPerfil);
@@ -185,7 +193,7 @@
             // 
             this.txtSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSenha.Location = new System.Drawing.Point(150, 127);
+            this.txtSenha.Location = new System.Drawing.Point(148, 176);
             this.txtSenha.MinimumSize = new System.Drawing.Size(300, 26);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Properties.MaxLength = 10;
@@ -304,7 +312,7 @@
             this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.EnterMoveNextControl = true;
-            this.txtNome.Location = new System.Drawing.Point(150, 37);
+            this.txtNome.Location = new System.Drawing.Point(148, 86);
             this.txtNome.MinimumSize = new System.Drawing.Size(300, 26);
             this.txtNome.Name = "txtNome";
             this.txtNome.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -320,7 +328,7 @@
             // 
             this.txtLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLogin.Location = new System.Drawing.Point(150, 82);
+            this.txtLogin.Location = new System.Drawing.Point(148, 131);
             this.txtLogin.MinimumSize = new System.Drawing.Size(300, 26);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Properties.MaxLength = 30;
@@ -333,7 +341,7 @@
             // 
             // lblNome
             // 
-            this.lblNome.Location = new System.Drawing.Point(96, 40);
+            this.lblNome.Location = new System.Drawing.Point(94, 89);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(48, 19);
             this.lblNome.StyleController = this.styleController1;
@@ -342,7 +350,7 @@
             // 
             // lblLogin
             // 
-            this.lblLogin.Location = new System.Drawing.Point(99, 85);
+            this.lblLogin.Location = new System.Drawing.Point(97, 134);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(45, 19);
             this.lblLogin.StyleController = this.styleController1;
@@ -351,7 +359,7 @@
             // 
             // lblSenha
             // 
-            this.lblSenha.Location = new System.Drawing.Point(95, 130);
+            this.lblSenha.Location = new System.Drawing.Point(93, 179);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(49, 19);
             this.lblSenha.StyleController = this.styleController1;
@@ -360,7 +368,7 @@
             // 
             // lblRepetirSenha
             // 
-            this.lblRepetirSenha.Location = new System.Drawing.Point(40, 175);
+            this.lblRepetirSenha.Location = new System.Drawing.Point(38, 224);
             this.lblRepetirSenha.Name = "lblRepetirSenha";
             this.lblRepetirSenha.Size = new System.Drawing.Size(104, 19);
             this.lblRepetirSenha.StyleController = this.styleController1;
@@ -371,7 +379,7 @@
             // 
             this.txtRepetirSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRepetirSenha.Location = new System.Drawing.Point(150, 172);
+            this.txtRepetirSenha.Location = new System.Drawing.Point(148, 221);
             this.txtRepetirSenha.MinimumSize = new System.Drawing.Size(300, 26);
             this.txtRepetirSenha.Name = "txtRepetirSenha";
             this.txtRepetirSenha.Properties.MaxLength = 10;
@@ -386,7 +394,7 @@
             // 
             // lblPerfil
             // 
-            this.lblPerfil.Location = new System.Drawing.Point(102, 220);
+            this.lblPerfil.Location = new System.Drawing.Point(100, 269);
             this.lblPerfil.Name = "lblPerfil";
             this.lblPerfil.Size = new System.Drawing.Size(42, 19);
             this.lblPerfil.StyleController = this.styleController1;
@@ -400,17 +408,48 @@
             this.cmbPerfis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPerfis.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPerfis.FormattingEnabled = true;
-            this.cmbPerfis.Location = new System.Drawing.Point(150, 217);
+            this.cmbPerfis.Location = new System.Drawing.Point(148, 266);
             this.cmbPerfis.MinimumSize = new System.Drawing.Size(300, 0);
             this.cmbPerfis.Name = "cmbPerfis";
             this.cmbPerfis.Size = new System.Drawing.Size(300, 27);
             this.cmbPerfis.Sorted = true;
             this.cmbPerfis.TabIndex = 10;
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodigo.EditValue = "";
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.EnterMoveNextControl = true;
+            this.txtCodigo.Location = new System.Drawing.Point(148, 44);
+            this.txtCodigo.MaximumSize = new System.Drawing.Size(168, 26);
+            this.txtCodigo.MinimumSize = new System.Drawing.Size(168, 26);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtCodigo.Properties.Appearance.Options.UseForeColor = true;
+            this.txtCodigo.Size = new System.Drawing.Size(168, 26);
+            this.txtCodigo.StyleController = this.styleController1;
+            this.txtCodigo.TabIndex = 13;
+            this.txtCodigo.TabStop = false;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCodigo.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(86, 47);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(56, 19);
+            this.lblCodigo.TabIndex = 12;
+            this.lblCodigo.Text = "Código:";
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(960, 661);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.LookAndFeel.SkinName = "Blue";
             this.Name = "frmUsuario";
@@ -436,6 +475,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNome.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRepetirSenha.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,6 +499,8 @@
         private DevExpress.XtraEditors.LabelControl lblPerfil;
         private DevExpress.XtraGrid.Columns.GridColumn colSenha;
         private System.Windows.Forms.ComboBox cmbPerfis;
+        private DevExpress.XtraEditors.TextEdit txtCodigo;
+        private DevExpress.XtraEditors.LabelControl lblCodigo;
 
         
       
