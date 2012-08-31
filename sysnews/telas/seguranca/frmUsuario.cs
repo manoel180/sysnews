@@ -118,6 +118,12 @@ namespace telas.seguranca
             usuario.senha = txtSenha.Text;
             usuario.perfil = (Int32)cmbPerfis.SelectedValue;
         }
+        private void popularComboPerfil()
+        {
+            cmbPerfis.DataSource = perfilDAL.SelectAll();
+            cmbPerfis.DisplayMember = "descricao";
+            cmbPerfis.ValueMember = "idPerfil";
+        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -163,11 +169,6 @@ namespace telas.seguranca
           
         }
 
-        private void popularComboPerfil()
-        {
-            cmbPerfis.DataSource = perfilDAL.SelectAll();
-            cmbPerfis.DisplayMember = "descricao";
-            cmbPerfis.ValueMember = "idPerfil";
-        }
+       
     }
 }
