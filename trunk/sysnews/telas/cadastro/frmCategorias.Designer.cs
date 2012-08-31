@@ -1,7 +1,7 @@
 ﻿using telas.util.layout;
-namespace telas.estoque
+namespace telas.cadastro
 {
-    partial class frmCategorias :frmBase
+    partial class frmCategorias : frmBase
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,6 @@ namespace telas.estoque
             this.gridTabela = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCategoria = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.txtCategoria = new DevExpress.XtraEditors.TextEdit();
             this.lblCategoria = new DevExpress.XtraEditors.LabelControl();
             this.lblCodigo = new DevExpress.XtraEditors.LabelControl();
@@ -53,7 +52,6 @@ namespace telas.estoque
             ((System.ComponentModel.ISupportInitialize)(this.cmbOpcoes.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvTabela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTabela)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCategoria.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +86,6 @@ namespace telas.estoque
             // 
             this.tabPanel.AppearancePage.Header.Font = new System.Drawing.Font("Tahoma", 10F);
             this.tabPanel.AppearancePage.Header.Options.UseFont = true;
-            this.tabPanel.SelectedTabPage = this.tabConsulta;
             // 
             // tabConsulta
             // 
@@ -107,6 +104,7 @@ namespace telas.estoque
             // 
             this.btnNovo.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.Appearance.Options.UseFont = true;
+            this.btnNovo.Image = global::telas.Properties.Resources.btn_add_categorias;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
@@ -131,6 +129,7 @@ namespace telas.estoque
             // pnlTabela
             // 
             this.pnlTabela.Controls.Add(this.gdvTabela);
+            this.pnlTabela.DoubleClick += new System.EventHandler(this.btnEditar_Click);
             // 
             // panel
             // 
@@ -166,6 +165,7 @@ namespace telas.estoque
             // 
             this.btnExcluir.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Appearance.Options.UseFont = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // gdvTabela
             // 
@@ -184,9 +184,7 @@ namespace telas.estoque
             this.gdvTabela.Location = new System.Drawing.Point(2, 2);
             this.gdvTabela.MainView = this.gridTabela;
             this.gdvTabela.Name = "gdvTabela";
-            this.gdvTabela.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemHyperLinkEdit1});
-            this.gdvTabela.Size = new System.Drawing.Size(950, 486);
+            this.gdvTabela.Size = new System.Drawing.Size(400, 200);
             this.gdvTabela.TabIndex = 29;
             this.gdvTabela.UseEmbeddedNavigator = true;
             this.gdvTabela.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -242,11 +240,6 @@ namespace telas.estoque
             this.colCategoria.Visible = true;
             this.colCategoria.VisibleIndex = 1;
             this.colCategoria.Width = 970;
-            // 
-            // repositoryItemHyperLinkEdit1
-            // 
-            this.repositoryItemHyperLinkEdit1.AutoHeight = false;
-            this.repositoryItemHyperLinkEdit1.Name = "repositoryItemHyperLinkEdit1";
             // 
             // txtCategoria
             // 
@@ -326,7 +319,6 @@ namespace telas.estoque
             this.Location = new System.Drawing.Point(0, 0);
             this.LookAndFeel.SkinName = "Blue";
             this.Name = "frmCategorias";
-            this.Text = "Cadastro de Categorias";
             this.Load += new System.EventHandler(this.frmCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbFiltros.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPesquisa.Properties)).EndInit();
@@ -344,7 +336,6 @@ namespace telas.estoque
             ((System.ComponentModel.ISupportInitialize)(this.cmbOpcoes.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvTabela)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTabela)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCategoria.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -359,7 +350,6 @@ namespace telas.estoque
         private DevExpress.XtraGrid.Columns.GridColumn colCategoria;
         private DevExpress.XtraEditors.TextEdit txtCategoria;
         private DevExpress.XtraEditors.LabelControl lblCategoria;
-        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit1;
         private DevExpress.XtraEditors.TextEdit txtCodigo;
         private DevExpress.XtraEditors.LabelControl lblCodigo;
     }
